@@ -3,8 +3,8 @@ extends CharacterBody2D
 var can_laser: bool = true
 var can_grenade: bool = true
 
-signal laser_shot(pos)
-signal grenade_shot(pos)
+signal laser_shot(pos, direction)
+signal grenade_shot(pos, direction)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,19 +19,22 @@ func _process(_delta: float) -> void:
 	velocity = direction * 500
 	move_and_slide()
 	
+	#rotate
+	look_at(get_global_mouse_position())
+	var player_direction = (get_global_mouse_position() - position).normalized()
 	#shoot laser
 	if Input.is_action_pressed("primary action") and can_laser:
 		var laser_markers = $LaserStartPositions.get_children()
 		var selected_laser = laser_markers[randi() % laser_markers.size()]
 		$LaserTimer.start()
 		can_laser = false
-		laser_shot.emit(selected_laser.global_position)
+		laser_shot.emit(selected_laser.global_position, player_direction)
 		
 	if Input.is_action_pressed("secondary action") and can_grenade:
 		var selected_grenade = $GrenadeStartPositions.get_children()[0]
 		$GrenadeTimer.start()
 		can_grenade = false
-		grenade_shot.emit(selected_grenade.global_position)
+		grenade_shot.emit(selected_grenade.global_position, player_direction)
 
 
 

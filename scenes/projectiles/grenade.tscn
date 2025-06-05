@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkrf2sft8gawk"]
+[gd_scene load_steps=5 format=3 uid="uid://bkrf2sft8gawk"]
 
 [ext_resource type="Texture2D" uid="uid://d02wf6ryq4oti" path="res://graphics/projectiles/grenade.png" id="1_1mnvm"]
 [ext_resource type="Script" uid="uid://c5cu8fsc470da" path="res://scenes/projectiles/grenade.gd" id="1_b7x1w"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b7x1w"]
+friction = 10.0
+bounce = 0.4
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b7x1w"]
 radius = 22.0
 
 [node name="Grenade" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_b7x1w")
+gravity_scale = 0.0
+linear_damp = 1.6
 script = ExtResource("1_b7x1w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
