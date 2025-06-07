@@ -59,7 +59,7 @@ position = Vector2(621.5, 499)
 scale = Vector2(1.24051, 1)
 texture = ExtResource("2_xb4v1")
 region_enabled = true
-region_rect = Rect2(-6586.11, -2848.27, 15452.1, 10302.8)
+region_rect = Rect2(-10258.9, -7859.13, 21388.3, 17503.3)
 
 [node name="Decoration" type="Sprite2D" parent="Ground"]
 modulate = Color(0.99408, 0.889033, 0.717605, 1)
