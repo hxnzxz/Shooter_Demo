@@ -29,6 +29,7 @@ func _process(_delta: float) -> void:
 		$LaserTimer.start()
 		can_laser = false
 		laser_shot.emit(selected_laser.global_position, player_direction)
+		$GPUParticles2D.emitting = true
 		
 	if Input.is_action_pressed("secondary action") and can_grenade:
 		var selected_grenade = $GrenadeStartPositions.get_children()[0]
