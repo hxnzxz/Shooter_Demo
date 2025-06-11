@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c16j60k506pji"]
+[gd_scene load_steps=19 format=3 uid="uid://c16j60k506pji"]
 
 [ext_resource type="Script" uid="uid://dmcjcrmqgqi6t" path="res://scenes/levels/level.gd" id="1_b2cq8"]
 [ext_resource type="Texture2D" uid="uid://clb3b1gb3kqym" path="res://graphics/ground/stones.png" id="2_xb4v1"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cgo3tvc54chg7" path="res://graphics/tilesets/outside_walls.png" id="9_7pb6i"]
 [ext_resource type="Texture2D" uid="uid://5offo8jl84bx" path="res://graphics/tilesets/soil.png" id="10_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://ccfkhvtyqwwle" path="res://scenes/houses/house.tscn" id="11_qogh7"]
+[ext_resource type="PackedScene" uid="uid://cihay4wslme1w" path="res://scenes/objects/light_fan_animation.tscn" id="15_mq31s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfk5q"]
 resource_name = "walls"
@@ -121,6 +122,11 @@ zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 
 [node name="Projectiles" type="Node2D" parent="."]
+
+[node name="LightFanAnimation" parent="." instance=ExtResource("15_mq31s")]
+position = Vector2(-3231, 867)
+autoplay = "default"
+frame_progress = 0.379491
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="grenade_shot" from="Player" to="." method="_on_player_grenade_shot"]

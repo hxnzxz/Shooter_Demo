@@ -1,8 +1,8 @@
 [gd_scene load_steps=45 format=3 uid="uid://ccfkhvtyqwwle"]
 
 [ext_resource type="Texture2D" uid="uid://bk140i147iodp" path="res://graphics/tilesets/interior.png" id="1_i7cyq"]
-[ext_resource type="PackedScene" uid="uid://b254ikl5q8qsi" path="res://scenes/simple_light.tscn" id="2_b1fwh"]
-[ext_resource type="PackedScene" uid="uid://bqryf0ctqxxae" path="res://scenes/wall_lamp.tscn" id="3_nwqdy"]
+[ext_resource type="PackedScene" uid="uid://b254ikl5q8qsi" path="res://scenes/objects/simple_light.tscn" id="2_b1fwh"]
+[ext_resource type="PackedScene" uid="uid://bqryf0ctqxxae" path="res://scenes/objects/wall_lamp.tscn" id="3_nwqdy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7cyq"]
 size = Vector2(4396, 4412)
