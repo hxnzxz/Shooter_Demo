@@ -6,6 +6,8 @@ var can_grenade: bool = true
 signal laser_shot(pos, direction)
 signal grenade_shot(pos, direction)
 
+@export var max_speed: int = 500
+var speed: int = max_speed
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -16,7 +18,7 @@ func _process(_delta: float) -> void:
 	
 	#input stuff
 	var direction :Vector2 = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * 500
+	velocity = direction * speed
 	move_and_slide()
 	
 	#rotate

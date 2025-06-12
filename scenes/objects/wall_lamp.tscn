@@ -7,6 +7,8 @@
 polygon = PackedVector2Array(212, -5, 210, 51, 225, 41, 226, 6, 221, 4, 219, -5)
 
 [node name="WallLamp" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 11
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(510, 158)

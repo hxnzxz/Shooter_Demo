@@ -1,13 +1,25 @@
 extends Area2D
 
-var speed: int = 1000
+@export var speed: int = 1000
 var direction:Vector2 = Vector2.UP
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$LaserDuration.start()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position += direction * speed * delta
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if "hit" in body:
+		body.hit()
+	queue_free()
+
+
+func _on_laser_duration_timeout() -> void:
+	print("laser expired")
+	queue_free()
