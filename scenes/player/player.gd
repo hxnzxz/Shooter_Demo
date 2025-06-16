@@ -25,16 +25,18 @@ func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
 	var player_direction = (get_global_mouse_position() - position).normalized()
 	#shoot laser
-	if Input.is_action_pressed("primary action") and can_laser:
+	if Input.is_action_pressed("primary action") and can_laser and Globals.laser_amount > 0:
 		var laser_markers = $LaserStartPositions.get_children()
 		var selected_laser = laser_markers[randi() % laser_markers.size()]
+		Globals.laser_amount -= 1
 		$LaserTimer.start()
 		can_laser = false
 		laser_shot.emit(selected_laser.global_position, player_direction)
 		$GPUParticles2D.emitting = true
 		
-	if Input.is_action_pressed("secondary action") and can_grenade:
+	if Input.is_action_pressed("secondary action") and can_grenade and Globals.grenade_amount > 0:
 		var selected_grenade = $GrenadeStartPositions.get_children()[0]
+		Globals.grenade_amount -= 1
 		$GrenadeTimer.start()
 		can_grenade = false
 		grenade_shot.emit(selected_grenade.global_position, player_direction)

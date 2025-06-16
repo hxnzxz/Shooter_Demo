@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://p6g423pijhsg"]
+[gd_scene load_steps=8 format=3 uid="uid://p6g423pijhsg"]
 
 [ext_resource type="Texture2D" uid="uid://ovhuoawd7ybn" path="res://graphics/ui/bullet.png" id="1_b2pox"]
+[ext_resource type="Script" uid="uid://hhtiwpu0gpm7" path="res://scenes/user interface/ui.gd" id="1_klrxq"]
 [ext_resource type="Texture2D" uid="uid://b81v2gx2rtnsy" path="res://graphics/ui/grenade.png" id="2_5nlf0"]
 [ext_resource type="Theme" uid="uid://od0w2ofdrr1a" path="res://scenes/user interface/main_theme.tres" id="2_s8vjj"]
+[ext_resource type="Texture2D" uid="uid://ddmi3fh6vxl3r" path="res://graphics/ui/progress_bar/bg.png" id="4_x14l5"]
+[ext_resource type="Texture2D" uid="uid://cknomehgh7mgc" path="res://graphics/ui/progress_bar/over.png" id="5_klrxq"]
+[ext_resource type="Texture2D" uid="uid://d3kq4r3p4hhw0" path="res://graphics/ui/progress_bar/progress.png" id="6_pf5bn"]
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_klrxq")
 
 [node name="LaserCounter" type="Control" parent="."]
 layout_mode = 3
@@ -23,6 +28,7 @@ offset_bottom = 40.0
 theme_override_constants/separation = 5
 
 [node name="Label" type="Label" parent="LaserCounter/VBoxContainer"]
+modulate = Color(0, 1, 0, 1)
 layout_mode = 2
 theme = ExtResource("2_s8vjj")
 text = "20"
@@ -50,6 +56,7 @@ offset_bottom = 40.0
 theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="GrenadeCounter/VBoxContainer"]
+modulate = Color(0, 1, 0, 1)
 layout_mode = 2
 theme = ExtResource("2_s8vjj")
 text = "5"
@@ -59,3 +66,23 @@ horizontal_alignment = 1
 layout_mode = 2
 texture = ExtResource("2_5nlf0")
 expand_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -40.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 16
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer"]
+layout_mode = 2
+value = 50.0
+texture_under = ExtResource("4_x14l5")
+texture_over = ExtResource("5_klrxq")
+texture_progress = ExtResource("6_pf5bn")

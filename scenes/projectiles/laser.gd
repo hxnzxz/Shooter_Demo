@@ -21,5 +21,4 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_laser_duration_timeout() -> void:
-	print("laser expired")
 	queue_free()
