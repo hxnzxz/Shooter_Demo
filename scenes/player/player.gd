@@ -5,7 +5,7 @@ var can_grenade: bool = true
 
 signal laser_shot(pos, direction)
 signal grenade_shot(pos, direction)
-
+signal update_stats()
 @export var max_speed: int = 500
 var speed: int = max_speed
 # Called when the node enters the scene tree for the first time.
@@ -52,3 +52,13 @@ func _on_grenade_timer_timeout() -> void:
 func _on_laser_timer_timeout() -> void:
 	can_laser = true
 	pass # Replace with function body.
+
+
+func add_item(type: String) -> void:
+	if type == 'health':
+		print("add health")
+	if type == 'grenade':
+		Globals.grenade_amount += 1
+	if type == 'laser':
+		Globals.laser_amount += 5
+	update_stats.emit()

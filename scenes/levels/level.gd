@@ -33,3 +33,8 @@ func _on_house_player_entered_house() -> void:
 func _on_house_player_left_house() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property($Player/Camera2D, "zoom", Vector2(0.5,0.5), 1)
+
+
+func _on_player_update_stats() -> void:
+	$UI.update_grenade_text()
+	$UI.update_laser_text()
