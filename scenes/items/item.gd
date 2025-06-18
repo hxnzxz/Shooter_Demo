@@ -19,6 +19,11 @@ func _process(delta: float) -> void:
 	rotation += rotation_speed * delta
 
 
-func _on_body_entered(body: Node2D) -> void:
-	body.add_item(type)
+func _on_body_entered(_body: Node2D) -> void:
+	if type == 'health':
+		Globals.health += 10
+	if type == 'grenade':
+		Globals.grenade_amount += 1
+	if type == 'laser':
+		Globals.laser_amount += 5
 	queue_free()
