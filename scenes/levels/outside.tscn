@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://exf73sgisntj"]
+[gd_scene load_steps=22 format=3 uid="uid://exf73sgisntj"]
 
 [ext_resource type="PackedScene" uid="uid://c16j60k506pji" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://b8d8es7vrkmj7" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://ccfkhvtyqwwle" path="res://scenes/houses/house.tscn" id="12_oe17f"]
 [ext_resource type="PackedScene" uid="uid://cihay4wslme1w" path="res://scenes/objects/light_fan_animation.tscn" id="13_xqqjy"]
 [ext_resource type="PackedScene" uid="uid://c2l18m1inryf2" path="res://scenes/items/item.tscn" id="16_x30qc"]
+[ext_resource type="PackedScene" uid="uid://j4y0px6mo3hn" path="res://scenes/container/crate.tscn" id="17_bjulg"]
+[ext_resource type="PackedScene" uid="uid://b5liku61eckp0" path="res://scenes/container/toilet.tscn" id="18_gd7nx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbwx5"]
 resource_name = "walls"
@@ -118,10 +120,17 @@ frame_progress = 0.379491
 [node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
 position = Vector2(626, -713)
 
-[node name="Player" parent="." index="3"]
+[node name="Crate" parent="." index="2" instance=ExtResource("17_bjulg")]
+position = Vector2(1247, 562)
+rotation = 1.5708
+
+[node name="Toilet" parent="." index="3" instance=ExtResource("18_gd7nx")]
+position = Vector2(1649, 297)
+
+[node name="Player" parent="." index="6"]
 position = Vector2(682, 156)
 
-[node name="Item" parent="." index="6" instance=ExtResource("16_x30qc")]
+[node name="Item" parent="." index="8" instance=ExtResource("16_x30qc")]
 position = Vector2(189, 273)
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]

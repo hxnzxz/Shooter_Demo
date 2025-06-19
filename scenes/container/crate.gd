@@ -1,11 +1,11 @@
 extends ItemContainer
 
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
 	
 func hit():
-	print("crate");
+	if not opened:
+		$LidSprite.hide()
+		for x in range(5):
+			var pos_node = $SpawnPositions.get_child(randi() % $SpawnPositions.get_child_count())
+			var pos = pos_node.global_position
+			open.emit(pos, cur_direction)
+		opened = true

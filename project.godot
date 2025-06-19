@@ -24,6 +24,10 @@ TransitionScene="*res://globals/transition_scene.tscn"
 
 project/assembly_name="Test"
 
+[global_group]
+
+Container=""
+
 [input]
 
 left={
