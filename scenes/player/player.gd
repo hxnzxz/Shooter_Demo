@@ -45,9 +45,7 @@ func _process(_delta: float) -> void:
 
 func _on_grenade_timer_timeout() -> void:
 	can_grenade = true
-	pass # Replace with function body.
 
 
 func _on_laser_timer_timeout() -> void:
 	can_laser = true
-	pass # Replace with function body.

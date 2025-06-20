@@ -6,9 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://cpqekunkkr8n8" path="res://graphics/objects/lid.png" id="4_pjnhl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pjnhl"]
-radius = 104.019
+radius = 98.6667
 
 [node name="Toilet" instance=ExtResource("1_k0lu2")]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("2_pjnhl")
 
 [node name="BaseSprite" parent="." index="0"]
