@@ -27,6 +27,7 @@ project/assembly_name="Test"
 [global_group]
 
 Container=""
+Scouts="Scout enemy"
 
 [input]
 

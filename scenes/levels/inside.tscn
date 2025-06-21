@@ -472,7 +472,6 @@ texture = ExtResource("24_07bqn")
 [node name="Corner2" type="Sprite2D" parent="Infestation" index="18"]
 position = Vector2(-836, -1554)
 rotation = -0.562769
-scale = Vector2(1, 1)
 texture = ExtResource("17_6x5su")
 
 [node name="Medium4" type="Sprite2D" parent="Infestation" index="19"]
@@ -567,7 +566,7 @@ position = Vector2(-3, 3675)
 position = Vector2(0, 25)
 shape = SubResource("RectangleShape2D_0kuad")
 
-[node name="Player" parent="." index="7"]
+[node name="Player" parent="." index="8"]
 position = Vector2(-1, 3395)
 rotation = -1.5708
 metadata/_edit_lock_ = true
