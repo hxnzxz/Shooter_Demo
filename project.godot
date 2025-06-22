@@ -28,6 +28,7 @@ project/assembly_name="Test"
 
 Container=""
 Scouts="Scout enemy"
+Entity=""
 
 [input]
 
