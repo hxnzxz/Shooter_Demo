@@ -9,7 +9,7 @@ func explode() -> void:
 	explosion_active = true
 			
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	if explosion_active:
 		for entity in get_tree().get_nodes_in_group("Entity") + \
 			get_tree().get_nodes_in_group("Container"):
