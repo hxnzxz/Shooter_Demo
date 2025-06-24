@@ -9,9 +9,10 @@ var health: int = 50
 var invulnerable: bool = false
 func hit():
 	if not invulnerable:
+		health -= 10
 		invulnerable = true
 		$Timers/InvulnerableFrame.start()
-		health -= 10
+		$Sprite2D.material.set_shader_parameter("progress", 1)
 	if health <= 0:
 		queue_free()
 	print("scout hit")
@@ -41,3 +42,4 @@ func _on_laser_cooldown_timeout() -> void:
 
 func _on_invulnerable_frame_timeout() -> void:
 	invulnerable = false
+	$Sprite2D.material.set_shader_parameter("progress", 0)
