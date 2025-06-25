@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://exf73sgisntj"]
+[gd_scene load_steps=22 format=3 uid="uid://exf73sgisntj"]
 
 [ext_resource type="PackedScene" uid="uid://c16j60k506pji" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://b8d8es7vrkmj7" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cihay4wslme1w" path="res://scenes/objects/light_fan_animation.tscn" id="13_xqqjy"]
 [ext_resource type="PackedScene" uid="uid://c2l18m1inryf2" path="res://scenes/items/item.tscn" id="16_x30qc"]
 [ext_resource type="PackedScene" uid="uid://bnyuayhqa4otk" path="res://scenes/enemies/scout.tscn" id="17_uaeil"]
+[ext_resource type="PackedScene" uid="uid://dotujmxtb1h2v" path="res://scenes/enemies/bug.tscn" id="18_bjulg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbwx5"]
 resource_name = "walls"
@@ -68,6 +69,7 @@ region_enabled = true
 region_rect = Rect2(-10258.9, -7859.13, 21388.3, 17503.3)
 
 [node name="SteamVent" parent="Ground/Soil" index="0" instance=ExtResource("3_xqqjy")]
+position = Vector2(1051.99, -171)
 
 [node name="Decoration" type="Sprite2D" parent="Ground" index="1"]
 modulate = Color(0.99408, 0.889033, 0.717605, 1)
@@ -130,6 +132,9 @@ position = Vector2(777, 961)
 
 [node name="Scout" parent="Enemies" index="0" instance=ExtResource("17_uaeil")]
 position = Vector2(1371, 1091)
+
+[node name="Bug" parent="Enemies" index="1" instance=ExtResource("18_bjulg")]
+position = Vector2(267, 425)
 
 [node name="Player" parent="." index="10"]
 z_index = 2
