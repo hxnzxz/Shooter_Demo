@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ddewmgh7g1ara"]
+[gd_scene load_steps=31 format=3 uid="uid://ddewmgh7g1ara"]
 
 [ext_resource type="PackedScene" uid="uid://c16j60k506pji" path="res://scenes/levels/level.tscn" id="1_8ht0b"]
 [ext_resource type="TileSet" uid="uid://45ygdhu7ucwm" path="res://scenes/levels/house.tres" id="2_b1uqu"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://w4sotu55lwaa" path="res://graphics/objects/infestation/spikes.png" id="21_afe1h"]
 [ext_resource type="Texture2D" uid="uid://cd1eqeuqxagus" path="res://graphics/objects/infestation/medium.png" id="22_j2d6r"]
 [ext_resource type="Texture2D" uid="uid://4gyhi6vgh2bp" path="res://graphics/objects/infestation/line.png" id="23_l6bxb"]
+[ext_resource type="PackedScene" uid="uid://dnk01wkwmkcf1" path="res://scenes/enemies/drone.tscn" id="24_6x5su"]
 [ext_resource type="Texture2D" uid="uid://d1d2tu0xygfsi" path="res://graphics/objects/infestation/large.png" id="24_07bqn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kuad"]
@@ -565,6 +566,9 @@ position = Vector2(-3, 3675)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitGate" index="0"]
 position = Vector2(0, 25)
 shape = SubResource("RectangleShape2D_0kuad")
+
+[node name="Drone" parent="Enemies" index="0" instance=ExtResource("24_6x5su")]
+position = Vector2(1896, 3032)
 
 [node name="Player" parent="." index="8"]
 position = Vector2(-1, 3395)
