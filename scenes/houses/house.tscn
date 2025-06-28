@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccfkhvtyqwwle"]
+[gd_scene load_steps=9 format=3 uid="uid://ccfkhvtyqwwle"]
 
 [ext_resource type="Script" uid="uid://howthj2sn5af" path="res://scenes/houses/house.gd" id="1_wmlim"]
 [ext_resource type="PackedScene" uid="uid://b254ikl5q8qsi" path="res://scenes/objects/simple_light.tscn" id="2_b1fwh"]
 [ext_resource type="TileSet" uid="uid://45ygdhu7ucwm" path="res://scenes/levels/house.tres" id="2_wmlim"]
 [ext_resource type="PackedScene" uid="uid://bqryf0ctqxxae" path="res://scenes/objects/wall_lamp.tscn" id="3_nwqdy"]
+[ext_resource type="PackedScene" uid="uid://i70u3rpmiki7" path="res://scenes/objects/bed.tscn" id="5_llgn4"]
+[ext_resource type="PackedScene" uid="uid://b5liku61eckp0" path="res://scenes/container/toilet.tscn" id="6_kvjtp"]
+[ext_resource type="PackedScene" uid="uid://j4y0px6mo3hn" path="res://scenes/container/crate.tscn" id="7_042jo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7cyq"]
 size = Vector2(4396, 4412)
@@ -35,9 +38,50 @@ position = Vector2(138, 1285)
 [node name="WallLamp2" parent="." instance=ExtResource("3_nwqdy")]
 position = Vector2(-758, 1276)
 
+[node name="WallLamp4" parent="." instance=ExtResource("3_nwqdy")]
+position = Vector2(-758, 1276)
+
 [node name="WallLamp3" parent="." instance=ExtResource("3_nwqdy")]
 position = Vector2(2003, 1234)
 rotation = -1.5708
+
+[node name="Bed" parent="." instance=ExtResource("5_llgn4")]
+position = Vector2(-1748, 1569)
+
+[node name="Bed2" parent="." instance=ExtResource("5_llgn4")]
+position = Vector2(239, 1878)
+rotation = 3.14159
+
+[node name="Toilet" parent="." instance=ExtResource("6_kvjtp")]
+position = Vector2(476, 1518)
+rotation = 1.5708
+
+[node name="Crate" parent="." instance=ExtResource("7_042jo")]
+position = Vector2(-1744, 1974)
+rotation = 3.14159
+
+[node name="Crate3" parent="." instance=ExtResource("7_042jo")]
+position = Vector2(-1039, 1974)
+rotation = 3.14159
+
+[node name="Crate4" parent="." instance=ExtResource("7_042jo")]
+position = Vector2(-474, 1974)
+rotation = 3.14159
+
+[node name="Crate2" parent="." instance=ExtResource("7_042jo")]
+position = Vector2(-1789, -1646)
+
+[node name="Crate5" parent="." instance=ExtResource("7_042jo")]
+position = Vector2(-1183, -1638)
+
+[node name="Crate6" parent="." instance=ExtResource("7_042jo")]
+position = Vector2(-439, -1634)
+
+[node name="Crate7" parent="." instance=ExtResource("7_042jo")]
+position = Vector2(601, -1647)
+
+[node name="Crate8" parent="." instance=ExtResource("7_042jo")]
+position = Vector2(1666, -1639)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
