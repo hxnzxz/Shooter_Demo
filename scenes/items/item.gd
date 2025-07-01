@@ -33,4 +33,7 @@ func _on_body_entered(_body: Node2D) -> void:
 		Globals.grenade_amount += 1
 	if type == 'laser':
 		Globals.laser_amount += 5
+	$Sprite2D.hide()
+	$AudioStreamPlayer2D.play()
+	await $AudioStreamPlayer2D.finished
 	queue_free()

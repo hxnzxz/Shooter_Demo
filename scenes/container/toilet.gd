@@ -11,6 +11,7 @@ func _process(_delta: float) -> void:
 func hit():
 	if not opened:
 		$LidSprite.hide()
+		$HitSound.play()
 		var pos_node = $SpawnPositions.get_child(randi() % $SpawnPositions.get_child_count())
 		var pos = pos_node.global_position
 		open.emit(pos, cur_direction)

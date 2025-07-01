@@ -16,6 +16,7 @@ func _process(_delta):
 func hit():
 	if vulnerable:
 		health -= 10
+		$AudioStreamPlayer2D.play()
 		vulnerable = false
 		$Timers/HitTimer.start()
 		$AnimatedSprite2D.material.set_shader_parameter("progress", 1)

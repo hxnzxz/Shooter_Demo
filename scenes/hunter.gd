@@ -13,7 +13,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if active:
 		var next_path_position: Vector2 = $NavigationAgent2D.get_next_path_position()
-		print($NavigationAgent2D.get_current_navigation_path())
+		#print($NavigationAgent2D.get_current_navigation_path())
 		var direction: Vector2 = (next_path_position - global_position).normalized()
 		velocity = direction * speed
 		move_and_slide()

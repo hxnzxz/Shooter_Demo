@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dotujmxtb1h2v"]
+[gd_scene load_steps=44 format=3 uid="uid://dotujmxtb1h2v"]
 
 [ext_resource type="Script" uid="uid://d2g05a27oplce" path="res://scenes/enemies/bug.gd" id="1_8oc5g"]
 [ext_resource type="Shader" uid="uid://cqenhll58mwp" path="res://scenes/enemies/bug.gdshader" id="2_abc4i"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://d0bqj1vv7oy2e" path="res://graphics/enemies/bug/walk/00007.png" id="30_8phhj"]
 [ext_resource type="Texture2D" uid="uid://b6kgvxr582xco" path="res://graphics/enemies/bug/walk/00008.png" id="31_ps8cy"]
 [ext_resource type="Texture2D" uid="uid://ckcr44f6duvbm" path="res://graphics/explosions/grunge.png" id="33_xww0a"]
+[ext_resource type="AudioStream" uid="uid://3spx3qgomdit" path="res://audio/organic_impact.mp3" id="34_uc11a"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xww0a"]
 shader = ExtResource("2_abc4i")
@@ -230,6 +231,9 @@ texture = ExtResource("33_xww0a")
 lifetime = 0.5
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_ey6sa")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("34_uc11a")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="NoticeRange" to="." method="_on_notice_range_body_entered"]

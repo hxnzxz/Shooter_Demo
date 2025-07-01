@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://exf73sgisntj"]
+[gd_scene load_steps=38 format=3 uid="uid://exf73sgisntj"]
 
 [ext_resource type="PackedScene" uid="uid://c16j60k506pji" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://b8d8es7vrkmj7" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://df02xvl8kn1p3" path="res://graphics/objects/infestation/small_4.png" id="24_ra0xe"]
 [ext_resource type="PackedScene" uid="uid://j4y0px6mo3hn" path="res://scenes/container/crate.tscn" id="25_2ngmq"]
 [ext_resource type="PackedScene" uid="uid://df0gp701qvpop" path="res://scenes/hunter.tscn" id="27_4jce7"]
+[ext_resource type="PackedScene" uid="uid://dnk01wkwmkcf1" path="res://scenes/enemies/drone.tscn" id="28_4602a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbwx5"]
 resource_name = "walls"
@@ -380,6 +381,9 @@ position = Vector2(777, 961)
 
 [node name="Hunter" parent="Enemies" index="0" instance=ExtResource("27_4jce7")]
 position = Vector2(1762, 787)
+
+[node name="Drone" parent="Enemies" index="1" instance=ExtResource("28_4602a")]
+position = Vector2(-41, 1139)
 
 [node name="Player" parent="." index="10"]
 z_index = 2

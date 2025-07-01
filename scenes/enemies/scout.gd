@@ -10,6 +10,7 @@ var invulnerable: bool = false
 func hit():
 	if not invulnerable:
 		health -= 10
+		$AudioStreamPlayer2D.play()
 		invulnerable = true
 		$Timers/InvulnerableFrame.start()
 		$Sprite2D.material.set_shader_parameter("progress", 1)
