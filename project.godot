@@ -21,6 +21,11 @@ Globals="*res://globals/globals.gd"
 TransitionScene="*res://globals/transition_scene.tscn"
 Music="*res://globals/music.tscn"
 
+[display]
+
+mouse_cursor/custom_image="uid://dg3owrtd067w7"
+mouse_cursor/custom_image_hotspot=Vector2(17, 17)
+
 [dotnet]
 
 project/assembly_name="Test"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://ddewmgh7g1ara"]
+[gd_scene load_steps=33 format=3 uid="uid://ddewmgh7g1ara"]
 
 [ext_resource type="PackedScene" uid="uid://c16j60k506pji" path="res://scenes/levels/level.tscn" id="1_8ht0b"]
 [ext_resource type="TileSet" uid="uid://45ygdhu7ucwm" path="res://scenes/levels/house.tres" id="2_b1uqu"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://dnk01wkwmkcf1" path="res://scenes/enemies/drone.tscn" id="24_6x5su"]
 [ext_resource type="Texture2D" uid="uid://d1d2tu0xygfsi" path="res://graphics/objects/infestation/large.png" id="24_07bqn"]
 [ext_resource type="PackedScene" uid="uid://bnyuayhqa4otk" path="res://scenes/enemies/scout.tscn" id="25_x8a3u"]
+[ext_resource type="PackedScene" uid="uid://dotujmxtb1h2v" path="res://scenes/enemies/bug.tscn" id="26_on0fk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kuad"]
 size = Vector2(748, 382)
@@ -572,7 +573,79 @@ shape = SubResource("RectangleShape2D_0kuad")
 position = Vector2(1750, 2761)
 
 [node name="Scout" parent="Enemies" index="1" instance=ExtResource("25_x8a3u")]
-position = Vector2(-566, 1430)
+position = Vector2(476, 1430)
+
+[node name="Scout2" parent="Enemies" index="2" instance=ExtResource("25_x8a3u")]
+position = Vector2(-379, 1430)
+
+[node name="Scout3" parent="Enemies" index="3" instance=ExtResource("25_x8a3u")]
+position = Vector2(-3073, 1829)
+
+[node name="Scout5" parent="Enemies" index="4" instance=ExtResource("25_x8a3u")]
+position = Vector2(-3915, 92)
+
+[node name="Scout4" parent="Enemies" index="5" instance=ExtResource("25_x8a3u")]
+position = Vector2(2305, -2751)
+
+[node name="Bug" parent="Enemies" index="6" instance=ExtResource("26_on0fk")]
+position = Vector2(-1242, 2638)
+
+[node name="Bug2" parent="Enemies" index="7" instance=ExtResource("26_on0fk")]
+position = Vector2(-291, 2566)
+
+[node name="Bug3" parent="Enemies" index="8" instance=ExtResource("26_on0fk")]
+position = Vector2(-508, 3189)
+
+[node name="Bug4" parent="Enemies" index="9" instance=ExtResource("26_on0fk")]
+position = Vector2(31, 2967)
+
+[node name="Bug5" parent="Enemies" index="10" instance=ExtResource("26_on0fk")]
+position = Vector2(543, 3089)
+
+[node name="Bug6" parent="Enemies" index="11" instance=ExtResource("26_on0fk")]
+position = Vector2(421, 2461)
+
+[node name="Bug7" parent="Enemies" index="12" instance=ExtResource("26_on0fk")]
+position = Vector2(2671, 2172)
+
+[node name="Bug9" parent="Enemies" index="13" instance=ExtResource("26_on0fk")]
+position = Vector2(1613, 218)
+
+[node name="Bug10" parent="Enemies" index="14" instance=ExtResource("26_on0fk")]
+position = Vector2(2501, 196)
+
+[node name="Bug11" parent="Enemies" index="15" instance=ExtResource("26_on0fk")]
+position = Vector2(2649, -1277)
+
+[node name="Bug14" parent="Enemies" index="16" instance=ExtResource("26_on0fk")]
+position = Vector2(29, -1247)
+
+[node name="Bug15" parent="Enemies" index="17" instance=ExtResource("26_on0fk")]
+position = Vector2(-1301, -1316)
+
+[node name="Bug16" parent="Enemies" index="18" instance=ExtResource("26_on0fk")]
+position = Vector2(-1537, -705)
+
+[node name="Bug17" parent="Enemies" index="19" instance=ExtResource("26_on0fk")]
+position = Vector2(-2433, -1394)
+
+[node name="Bug18" parent="Enemies" index="20" instance=ExtResource("26_on0fk")]
+position = Vector2(-3142, -1374)
+
+[node name="Bug19" parent="Enemies" index="21" instance=ExtResource("26_on0fk")]
+position = Vector2(-2561, -359)
+
+[node name="Bug20" parent="Enemies" index="22" instance=ExtResource("26_on0fk")]
+position = Vector2(-4206, -1177)
+
+[node name="Bug12" parent="Enemies" index="23" instance=ExtResource("26_on0fk")]
+position = Vector2(1835, -2417)
+
+[node name="Bug13" parent="Enemies" index="24" instance=ExtResource("26_on0fk")]
+position = Vector2(2878, -2387)
+
+[node name="Bug8" parent="Enemies" index="25" instance=ExtResource("26_on0fk")]
+position = Vector2(2967, 2890)
 
 [node name="Player" parent="." index="8"]
 position = Vector2(-1, 3395)

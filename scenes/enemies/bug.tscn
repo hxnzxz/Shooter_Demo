@@ -193,19 +193,16 @@ sprite_frames = SubResource("SpriteFrames_8llbs")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_jahts")
 
 [node name="NoticeRange" type="Area2D" parent="."]
-visible = false
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoticeRange"]
 shape = SubResource("CircleShape2D_jahts")
 
 [node name="AttackHitBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitBox"]

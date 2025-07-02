@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://exf73sgisntj"]
+[gd_scene load_steps=39 format=3 uid="uid://exf73sgisntj"]
 
 [ext_resource type="PackedScene" uid="uid://c16j60k506pji" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://b8d8es7vrkmj7" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://j4y0px6mo3hn" path="res://scenes/container/crate.tscn" id="25_2ngmq"]
 [ext_resource type="PackedScene" uid="uid://df0gp701qvpop" path="res://scenes/hunter.tscn" id="27_4jce7"]
 [ext_resource type="PackedScene" uid="uid://dnk01wkwmkcf1" path="res://scenes/enemies/drone.tscn" id="28_4602a"]
+[ext_resource type="PackedScene" uid="uid://bnyuayhqa4otk" path="res://scenes/enemies/scout.tscn" id="29_teddg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbwx5"]
 resource_name = "walls"
@@ -380,10 +381,37 @@ position = Vector2(552, 961)
 position = Vector2(777, 961)
 
 [node name="Hunter" parent="Enemies" index="0" instance=ExtResource("27_4jce7")]
-position = Vector2(1762, 787)
+position = Vector2(2931, 4107)
 
 [node name="Drone" parent="Enemies" index="1" instance=ExtResource("28_4602a")]
-position = Vector2(-41, 1139)
+position = Vector2(3386, 130)
+
+[node name="Drone2" parent="Enemies" index="2" instance=ExtResource("28_4602a")]
+position = Vector2(5533, -628)
+
+[node name="Drone3" parent="Enemies" index="3" instance=ExtResource("28_4602a")]
+position = Vector2(2007, 5361)
+
+[node name="Drone4" parent="Enemies" index="4" instance=ExtResource("28_4602a")]
+position = Vector2(-790, 5233)
+
+[node name="Scout" parent="Enemies" index="5" instance=ExtResource("29_teddg")]
+position = Vector2(-4453, 3079)
+
+[node name="Scout2" parent="Enemies" index="6" instance=ExtResource("29_teddg")]
+position = Vector2(-3973, 3974)
+
+[node name="Scout3" parent="Enemies" index="7" instance=ExtResource("29_teddg")]
+position = Vector2(-3462, 4737)
+
+[node name="Scout4" parent="Enemies" index="8" instance=ExtResource("29_teddg")]
+position = Vector2(-2734, 5738)
+
+[node name="Scout5" parent="Enemies" index="9" instance=ExtResource("29_teddg")]
+position = Vector2(2270, 2113)
+
+[node name="Scout6" parent="Enemies" index="10" instance=ExtResource("29_teddg")]
+position = Vector2(-1010, 793)
 
 [node name="Player" parent="." index="10"]
 z_index = 2
@@ -401,6 +429,8 @@ rotation = 0.802463
 progress = 20627.5
 
 [node name="LevelBarriers" type="Node2D" parent="." index="14"]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LevelBarriers" index="0"]
 collision_layer = 16
@@ -418,6 +448,7 @@ position = Vector2(2158.38, 6075.5)
 shape = SubResource("RectangleShape2D_2ngmq")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="LevelBarriers" index="2"]
+position = Vector2(96, 763)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D3" index="0"]
 position = Vector2(5650.5, 6465.25)
