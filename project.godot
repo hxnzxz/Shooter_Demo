@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Test"
+config/name="Shooter"
 run/main_scene="uid://exf73sgisntj"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
